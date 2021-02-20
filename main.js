@@ -17,23 +17,18 @@ sprite.src = "img/sprite.png"
 
 let swooshing = new Audio
 swooshing.src = "music/sfx_swooshing.wav"
-swooshing.volume = 0.1
 
 let flap = new Audio
 flap.src = "music/sfx_flap.wav"
-flap.volume = 0.1
 
 let die = new Audio
 die.src = "music/sfx_die.wav"
-die.volume = 0.1
 
 let hit = new Audio
 hit.src = "music/sfx_hit.wav"
-hit.volume = 0.1
 
 let point = new Audio
 point.src = "music/sfx_point.wav"
-point.volume = 0.1
 
 //GAME STATE
 
