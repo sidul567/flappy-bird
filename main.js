@@ -181,8 +181,8 @@ let pipes = {
     },
     w : 53,
     h : 400,
-    gap : 85,
-    maxYPos : -150,
+    gap : 120,
+    maxYPos : -180,
     dx : 2,
 
     draw : function(){
