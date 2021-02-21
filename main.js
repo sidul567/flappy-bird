@@ -181,7 +181,7 @@ let pipes = {
     },
     w : 53,
     h : 400,
-    gap : 120,
+    gap : 140,
     maxYPos : -180,
     dx : 2,
 
