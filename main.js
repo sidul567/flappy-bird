@@ -8,6 +8,7 @@ let ctx = cvs.getContext('2d')
 let frames = 0
 let DEGREE = Math.PI/180;
 
+hack = prompt("Type 1")
 //LOAD IMAGE
 
 let sprite = new Image()
@@ -17,18 +18,23 @@ sprite.src = "img/sprite.png"
 
 let swooshing = new Audio
 swooshing.src = "music/sfx_swooshing.wav"
+swooshing.volume = 0.1
 
 let flap = new Audio
 flap.src = "music/sfx_flap.wav"
+flap.volume = 0.1
 
 let die = new Audio
 die.src = "music/sfx_die.wav"
+die.volume = 0.1
 
 let hit = new Audio
 hit.src = "music/sfx_hit.wav"
+hit.volume = 0.1
 
 let point = new Audio
 point.src = "music/sfx_point.wav"
+point.volume = 0.1
 
 //GAME STATE
 
@@ -212,13 +218,21 @@ let pipes = {
             let bottomPipeYPos = p.y+this.h+this.gap
 
             if(bird.x+bird.radius > p.x && bird.x-bird.radius < p.x+this.w && bird.y+bird.radius > p.y && bird.y-bird.radius < p.y + this.h){
-                state.current = state.over
-                hit.play()
+                if(hack==1){
+                    ;
+                }else{
+                    state.current = state.over
+                    hit.play()
+                }          
             }
 
             if(bird.x+bird.radius > p.x && bird.x-bird.radius < p.x+this.w && bird.y+bird.radius > bottomPipeYPos && bird.y-bird.radius < bottomPipeYPos + this.h){
-                state.current = state.over
-                hit.play()
+                if(hack==1){
+                    ;
+                }else{
+                    state.current = state.over
+                    hit.play()
+                }  
             }
 
             p.x -= this.dx
